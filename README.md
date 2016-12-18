@@ -94,6 +94,7 @@ let context = (UIApplication.shared.delegate as! AppDelegate).coreDataStack.pers
             person.name = name.text	
             if let myNumber = NumberFormatter().number(from: phonenumber.text!) {
 	  person.phonenumber = Int(myNumber.intValue)
+	  context.save()
                 // do what you need to do with myInt
             } else {
                 person.phonenumber = 12323423
